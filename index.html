@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .view {
+            margin: 0 auto;
+            width: 85vw;
+            height: 85vh;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0) none repeat scroll 0% 0%;
+        }
+
+        .title {
+            height: 40px;
+            margin: 20px;
+            border-bottom: 2px solid #ccc;
+        }
+        .title li {
+            float: left;
+        }
+        .title li a {
+            text-align: center;
+            font-size: 20px;
+            color: skyblue;
+            padding: 0 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body style="width: 100%;">
+    <div class="title">
+        <ul>
+            <li><a href="#" onclick="liClick(this)">首页</a></li>
+            <li><a href="#" onclick="liClick(this)">斗罗大陆</a></li>
+            <li><a href="#" onclick="liClick(this)">斗破苍穹</a></li>
+            <li><a href="#" onclick="liClick(this)">完美世界</a></li>
+            <li><a href="#" onclick="liClick(this)">一念永恒</a></li>
+            <li><a href="#" onclick="liClick(this)">星骇骑士</a></li>
+            <li><a href="#" onclick="liClick(this)">绝世武魂</a></li>
+            <li><a href="#" onclick="liClick(this)">灵剑尊</a></li>
+            <li><a href="#" onclick="liClick(this)">不良人</a></li>
+            <li><a href="#" onclick="liClick(this)">眷思量</a></li>
+        </ul>
+    </div>
+    <div class="view">
+        <iframe id="video1" src="https://z1.m1907.cn?jx=" width="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <!-- <iframe allow="autoplay; encrypted-media" allowfullscreen="" src="https://z1.m1907.cn/?jx=夏洛特烦恼" width="100%" height="100%" frameborder="0"></iframe> -->
+    </div>
+
+    <script>
+        // document.getElementById('video1').src = "https://z1.m1907.cn?jx=";
+        function liClick(id) {
+            let src = "https://z1.m1907.cn?jx=";
+            src += id.innerHTML + "&autoplay=1";
+            // console.log(src);
+            document.getElementById("video1").src = src
+        }
+    </script>
+</body>
+</html>
