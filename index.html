@@ -23,7 +23,7 @@
             overflow: hidden;
             border-bottom: 2px solid #ccc;
         }
-        .title li {
+        /* .title li {
             float: left;
         }
         .title li a {
@@ -34,6 +34,22 @@
         }
         @media screen and (min-width: 750px) {
             .title li a {
+                font-size: 20px;
+                padding: 0 15px;
+            }
+        } */
+        .title li {
+            float: left;
+            text-align: center;
+            font-size: 15px;
+            color: skyblue;
+            padding: 0 12px;
+        }
+        .title li:hover {
+            cursor: pointer;
+        }
+        @media screen and (min-width: 750px) {
+            .title li {
                 font-size: 20px;
                 padding: 0 15px;
             }
@@ -53,18 +69,30 @@
 </head>
 <body>
     <div class="title">
+        <!-- <ul>
+            <li><a href="#" onclick="liClick(this)">首页</a></li>
+            <li><a href="#" onclick="liClick(this)">斗罗大陆</a></li>
+            <li><a href="#" onclick="liClick(this)">斗破苍穹</a></li>
+            <li><a href="#" onclick="liClick(this)">完美世界</a></li>
+            <li><a href="#" onclick="liClick(this)">一念永恒</a></li>
+            <li><a href="#" onclick="liClick(this)">星骇骑士</a></li>
+            <li><a href="#" onclick="liClick(this)">绝世武魂</a></li>
+            <li><a href="#" onclick="liClick(this)">灵剑尊</a></li>
+            <li><a href="#" onclick="liClick(this)">不良人</a></li>
+            <li><a href="#" onclick="liClick(this)">眷思量</a></li>
+        </ul> -->
         <ul>
-            <li><a href="" onclick="liClick(this)">首页</a></li>
-            <li><a href="" onclick="liClick(this)">斗罗大陆</a></li>
-            <li><a href="" onclick="liClick(this)">斗破苍穹</a></li>
-            <li><a href="" onclick="liClick(this)">完美世界</a></li>
-            <li><a href="" onclick="liClick(this)">一念永恒</a></li>
-            <li><a href="" onclick="liClick(this)">星骇骑士</a></li>
-            <li><a href="" onclick="liClick(this)">绝世武魂</a></li>
-            <li><a href="" onclick="liClick(this)">灵剑尊</a></li>
-            <li><a href="" onclick="liClick(this)">不良人</a></li>
-            <li><a href="" onclick="liClick(this)">眷思量</a></li>
-        </ul>
+            <li onclick="liClick(this)">首页</li>
+            <li onclick="liClick(this)">斗罗大陆</li>
+            <li onclick="liClick(this)">斗破苍穹</li>
+            <li onclick="liClick(this)">完美世界</li>
+            <li onclick="liClick(this)">一念永恒</li>
+            <li onclick="liClick(this)">星骇骑士</li>
+            <li onclick="liClick(this)">绝世武魂</li>
+            <li onclick="liClick(this)">灵剑尊</li>
+            <li onclick="liClick(this)">不良人</li>
+            <li onclick="liClick(this)">眷思量</li>
+        </ul> 
     </div>
     <div class="view">
         <iframe id="video1" src="https://z1.m1907.cn?jx=" width="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -72,12 +100,12 @@
     </div>
 
     <script>
-        // document.getElementById('video1').src = "https://z1.m1907.cn?jx=";
         function liClick(id) {
             let src = "https://z1.m1907.cn?jx=";
-            let date = new Date();
-            let year = date.getFullYear();
-            src += id.innerHTML + year + "&autoplay=1";
+            // let date = new Date();
+            // let year = date.getFullYear();
+            // src += id.innerHTML + year + "&autoplay=1";
+            src += id.innerHTML + "&autoplay=1";
             // console.log(src);
             document.getElementById("video1").src = src
         }
