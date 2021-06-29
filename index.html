@@ -13,25 +13,14 @@
         ul {
             list-style-type: none;
         }
-        .body {
-            width: 100%;
-            height: 100%;
-        }
-
-        .view {
-            margin: 0 auto;
-            width: 85vw;
-            height: 85vh;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            background: rgb(0, 0, 0) none repeat scroll 0% 0%;
+        a {
+            text-decoration: none;
         }
 
         .title {
-            height: 40px;
-            margin: 20px;
+            margin: 10px;
+            padding: 10px;
+            overflow: hidden;
             border-bottom: 2px solid #ccc;
         }
         .title li {
@@ -39,26 +28,42 @@
         }
         .title li a {
             text-align: center;
-            font-size: 20px;
+            font-size: 15px;
             color: skyblue;
-            padding: 0 20px;
-            text-decoration: none;
+            padding: 0 12px;
+        }
+        @media screen and (min-width: 750px) {
+            .title li a {
+                font-size: 20px;
+                padding: 0 15px;
+            }
+        }
+
+        .view {
+            width: 85vw;
+            height: 80vh;
+            margin: 0 auto;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0) none repeat scroll 0% 0%;
         }
     </style>
 </head>
-<body style="width: 100%;">
+<body>
     <div class="title">
         <ul>
-            <li><a href="#" onclick="liClick(this)">首页</a></li>
-            <li><a href="#" onclick="liClick(this)">斗罗大陆</a></li>
-            <li><a href="#" onclick="liClick(this)">斗破苍穹</a></li>
-            <li><a href="#" onclick="liClick(this)">完美世界</a></li>
-            <li><a href="#" onclick="liClick(this)">一念永恒</a></li>
-            <li><a href="#" onclick="liClick(this)">星骇骑士</a></li>
-            <li><a href="#" onclick="liClick(this)">绝世武魂</a></li>
-            <li><a href="#" onclick="liClick(this)">灵剑尊</a></li>
-            <li><a href="#" onclick="liClick(this)">不良人</a></li>
-            <li><a href="#" onclick="liClick(this)">眷思量</a></li>
+            <li><a href="" onclick="liClick(this)">首页</a></li>
+            <li><a href="" onclick="liClick(this)">斗罗大陆</a></li>
+            <li><a href="" onclick="liClick(this)">斗破苍穹</a></li>
+            <li><a href="" onclick="liClick(this)">完美世界</a></li>
+            <li><a href="" onclick="liClick(this)">一念永恒</a></li>
+            <li><a href="" onclick="liClick(this)">星骇骑士</a></li>
+            <li><a href="" onclick="liClick(this)">绝世武魂</a></li>
+            <li><a href="" onclick="liClick(this)">灵剑尊</a></li>
+            <li><a href="" onclick="liClick(this)">不良人</a></li>
+            <li><a href="" onclick="liClick(this)">眷思量</a></li>
         </ul>
     </div>
     <div class="view">
