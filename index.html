@@ -75,7 +75,9 @@
         // document.getElementById('video1').src = "https://z1.m1907.cn?jx=";
         function liClick(id) {
             let src = "https://z1.m1907.cn?jx=";
-            src += id.innerHTML + "&autoplay=1";
+            let date = new Date();
+            let year = date.getFullYear();
+            src += id.innerHTML + year + "&autoplay=1";
             // console.log(src);
             document.getElementById("video1").src = src
         }
