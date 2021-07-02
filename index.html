@@ -97,13 +97,13 @@
             <li onclick="liClick('')">首页</li>
 
             <li class="day1" onclick="liClick('https://v.qq.com/x/cover/gehpfier9upkqz5.html')">眷思量</li>
-            <li class="day1" onclick="liClick('https://v.qq.com/x/cover/mzc00200qqsk3cv.html')">独步逍遥</li>
+            <li class="day1 day4" onclick="liClick('https://v.qq.com/x/cover/mzc00200qqsk3cv.html')">独步逍遥</li>
 
-            <li class="day2" onclick="liClick('https://v.qq.com/x/cover/2w2legt0g8z26al.html')">灵剑尊</li>
+            <li class="day2 day5" onclick="liClick('https://v.qq.com/x/cover/2w2legt0g8z26al.html')">灵剑尊</li>
             <li class="day2" onclick="liClick('https://v.qq.com/x/cover/mzc00200opm367n.html')">末世觉醒</li>
 
             <li class="day3" onclick="liClick('https://v.qq.com/x/cover/ww18u675tfmhas6.html')">一念永恒</li>
-            <li class="day3" onclick="liClick('https://v.qq.com/x/cover/mzc00200no18bci.html')">绝世武魂</li>
+            <li class="day3 day0" onclick="liClick('https://v.qq.com/x/cover/mzc00200no18bci.html')">绝世武魂</li>
             <li class="day3" onclick="liClick('https://v.qq.com/x/cover/umpnsyqfu7f60se.html')">星骇骑士</li>
             <li class="day3" onclick="liClick('https://v.qq.com/x/cover/0gsf9fytppje54d.html')">西行纪</li>
             <li class="day3" onclick="liClick('https://www.iqiyi.com/v_1842738ls6g.html')">万古神王</li>
@@ -114,7 +114,8 @@
 
             <li class="day6" onclick="liClick('https://v.qq.com/x/cover/m441e3rjq9kwpsc.html')">斗罗大陆</li>
 
-            <li class="day0" onclick="liClick('https://v.qq.com/x/cover/mzc00200p29gosv.html')">斗破苍穹</li>                             
+            <li class="day0" onclick="liClick('https://v.qq.com/x/cover/mzc00200p29gosv.html')">斗破苍穹</li> 
+            <li class="day0" onclick="liClick('https://www.bilibili.com/bangumi/play/ep408247?from=search&seid=4948567917396536904')">镇魂街2</li>                            
         </ul> 
     </div>
     <div class="view">
@@ -125,10 +126,10 @@
     <script>
         let date = new Date();
         let d = 'day' + date.getDay();
-        let style = document.getElementsByClassName(d);
-        for(let i=0; i<style.length; i++)
+        let items = document.getElementsByClassName(d);
+        for(let i=0; i<items.length; i++)
         {
-            style[i].style.color="#0a84ff";
+            items[i].style.color="#0a84ff";
         }
 
         /*
