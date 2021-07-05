@@ -16,6 +16,17 @@
         a {
             text-decoration: none;
         }
+        body {
+            /* background: url(./images/1.jpg) no-repeat;
+            height:100%;
+            width:100%;
+            overflow: hidden;
+            background-size: cover; */
+
+            height: 100vh;
+            overflow: hidden;
+            background-image: linear-gradient(to left top, #fff,#000);
+        }
 
         .title {
             margin: 10px;
@@ -58,12 +69,25 @@
         .view {
             width: 85vw;
             height: 80vh;
-            margin: 10px auto;
+            margin: 20px auto;
         }
         iframe {
             width: 100%;
             height: 100%;
             background: rgb(0, 0, 0) none repeat scroll 0% 0%;
+        }
+
+        .linear {
+            /* margin-top: 20px;
+            text-align: center; */
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .linear:hover {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -122,6 +146,7 @@
         <iframe id="video1" src="https://z1.m1907.cn?jx=" width="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         <!-- <iframe allow="autoplay; encrypted-media" allowfullscreen="" src="https://z1.m1907.cn/?jx=夏洛特烦恼" width="100%" height="100%" frameborder="0"></iframe> -->
     </div>
+    <div class="linear" onclick="linearChange()">👕</div>
 
     <script>
         let date = new Date();
@@ -149,6 +174,20 @@
             src += url + "&autoplay=1";
             // console.log(src);
             document.getElementById("video1").src = src
+        }
+
+        let flag = 1;
+        function linearChange() {
+            // background-image: linear-gradient(to left top, #fff,#000);
+            if(flag == 1) {
+                // document.body.style.backgroundImage = 'linear-gradient(to left top, #000,#666,#000)';
+                document.body.style.backgroundImage = 'url()';
+                flag = 0;
+            }
+            else {
+                document.body.style.backgroundImage = 'linear-gradient(to left top, #fff,#000)';
+                flag = 1;
+            }
         }
     </script>
 </body>
