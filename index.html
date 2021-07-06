@@ -25,14 +25,15 @@
 
             height: 100vh;
             overflow: hidden;
-            background-image: linear-gradient(to left top, #fff,#000);
+            /* background-image: linear-gradient(to left top,#243137, #fff); */
+            background-color: #243137;
         }
 
         .title {
             margin: 10px;
             padding: 10px;
             overflow: hidden;
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #eee;
         }
         /* .title li {
             float: left;
@@ -54,7 +55,7 @@
             width: 80px;
             text-align: center;
             font-size: 15px;
-            color: skyblue;
+            color: orange;
         }
         .title li:hover {
             cursor: pointer;
@@ -181,11 +182,13 @@
             // background-image: linear-gradient(to left top, #fff,#000);
             if(flag == 1) {
                 // document.body.style.backgroundImage = 'linear-gradient(to left top, #000,#666,#000)';
-                document.body.style.backgroundImage = 'url()';
+                //document.body.style.backgroundImage = 'url()';
+                document.body.style.backgroundColor = '#fff';
                 flag = 0;
             }
             else {
-                document.body.style.backgroundImage = 'linear-gradient(to left top, #fff,#000)';
+                //document.body.style.backgroundImage = 'linear-gradient(to left top, #fff,#000)';
+                document.body.style.backgroundColor = '#243137';
                 flag = 1;
             }
         }
