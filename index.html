@@ -125,7 +125,7 @@
             <li onclick="liClick(this)">不良人</li>
             <li onclick="liClick(this)">眷思量</li>
         </ul>  -->
-        <ul>
+        <!-- <ul>
             <li onclick="liClick('')">首页</li>
 
             <li class="day1" onclick="liClick('https://v.qq.com/x/cover/gehpfier9upkqz5.html')">眷思量</li>
@@ -148,6 +148,23 @@
 
             <li class="day0" onclick="liClick('https://v.qq.com/x/cover/mzc00200p29gosv.html')">斗破苍穹</li> 
             <li class="day0" onclick="liClick('https://www.bilibili.com/bangumi/play/ep408247?from=search&seid=4948567917396536904')">镇魂街2</li>                            
+        </ul>  -->
+        <ul>
+            <li>首页</li>
+            <li class="day1" data-url="https://v.qq.com/x/cover/gehpfier9upkqz5.html">眷思量</li>
+            <li class="day1 day4" data-url="https://v.qq.com/x/cover/mzc00200qqsk3cv.html">独步逍遥</li>
+            <li class="day2 day5" data-url="https://v.qq.com/x/cover/2w2legt0g8z26al.html">灵剑尊</li>
+            <li class="day2" data-url="https://v.qq.com/x/cover/mzc00200opm367n.html">末世觉醒</li>
+            <li class="day3" data-url="https://v.qq.com/x/cover/ww18u675tfmhas6.html">一念永恒</li>
+            <li class="day3 day0" data-url="https://v.qq.com/x/cover/mzc00200no18bci.html">绝世武魂</li>
+            <li class="day3" data-url="https://v.qq.com/x/cover/umpnsyqfu7f60se.html">星骇骑士</li>
+            <li class="day3" data-url="https://v.qq.com/x/cover/0gsf9fytppje54d.html">西行纪</li>
+            <li class="day3" data-url="https://www.iqiyi.com/v_1842738ls6g.html">万古神王</li>
+            <li class="day4" data-url="https://v.qq.com/x/cover/mzc00200eacw05k.html">不良人4</li>
+            <li class="day5" data-url="https://v.qq.com/x/cover/mcv8hkc8zk8lnov.html">完美世界</li>
+            <li class="day6" data-url="https://v.qq.com/x/cover/m441e3rjq9kwpsc.html">斗罗大陆</li>
+            <li class="day0" data-url="https://v.qq.com/x/cover/mzc00200p29gosv.html">斗破苍穹</li> 
+            <li class="day0" data-url="https://www.bilibili.com/bangumi/play/ep408247?from=search&seid=4948567917396536904">镇魂街2</li>                            
         </ul> 
     </div>
     <div class="view">
@@ -177,12 +194,27 @@
         }
         */
 
-        function liClick(url) {
-            let src = "https://z1.m1907.cn?jx=";
-            src += url + "&autoplay=1";
-            // console.log(src);
-            document.getElementById("video1").src = src
-        }
+        // function liClick(url) {
+        //     let src = "https://z1.m1907.cn?jx=";
+        //     src += url + "&autoplay=1";
+        //     // console.log(src);
+        //     document.getElementById("video1").src = src
+        // }
+        
+        const video = document.querySelector('iframe')
+        const ul = document.querySelector('ul')
+        ul.addEventListener('click', function (e) {
+            // const url = e.target.getAttribute('data-url')
+            const url = e.target.dataset.url;
+            if(url) {
+                video.src = "https://z1.m1907.cn?jx=" + url + "&autoplay=1";
+            }else {
+                video.src = "https://z1.m1907.cn?jx=";
+            }
+            
+            // video.src = "https://z1.m1907.cn?jx=" + e.target.dataset.url + "&autoplay=1";
+            // console.log(video.src);
+        })
 
         let flag = 1;
         function linearChange() {
